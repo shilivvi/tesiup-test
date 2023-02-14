@@ -1,6 +1,6 @@
 .managers{
   background-color: var(--grey-bg);
-  padding: 64px 0 40px 0;
+  padding: var(--padding-section) 0 40px 0;
 
   &__grid{
     display: flex;
@@ -17,7 +17,7 @@
 
   &__title{
     margin-bottom: 24px;
-    font-size: rem(32);
+    @include adaptiveValue('font-size', 32, 24);
 
     &:not(:first-child){
       margin-top: 40px;
@@ -27,7 +27,7 @@
   &__text{
     margin: 0;
     color: var(--grey-text);
-    font-size: rem(16);
+    @include adaptiveValue('font-size', 16, 14);
     line-height: 1.5;
     font-weight: 400;
 
@@ -107,7 +107,7 @@
     text-align: center;
     color: var(--blue-text);
     font-family: 'KaushanScript';
-    font-size: rem(24);
+    @include adaptiveValue('font-size', 24, 19);
     line-height: 1.33;
   }
 
@@ -122,7 +122,7 @@
   &__name{
     margin-bottom: 16px;
     color: var(--green-text);
-    font-size: rem(24);
+    @include adaptiveValue('font-size', 24, 20);
     line-height: 1;
     font-weight: 700;
     text-align: center;
@@ -142,7 +142,7 @@
     margin-left: 6px;
     text-decoration: none;
     color: var(--black-text);
-    font-size: rem(16);
+    @include adaptiveValue('font-size', 16, 14);
     line-height: 1.5;
     font-weight: 400;
   }

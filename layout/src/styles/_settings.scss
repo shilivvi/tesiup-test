@@ -78,6 +78,10 @@ img {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @media (max-width: 424.98px) {
+    padding: 0 10px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

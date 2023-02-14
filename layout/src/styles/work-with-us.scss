@@ -1,6 +1,6 @@
 .work-with-us {
   background-color: var(--light-bg);
-  margin: 64px 0;
+  padding: var(--padding-section) 0;
   position: relative;
 
   &__grid {
@@ -17,7 +17,7 @@
     grid-column: 1 / 2;
 
     margin: 0 0 em(24, 32) 0;
-    font-size: rem(32);
+    @include adaptiveValue('font-size', 32, 24);
   }
 
   &__list {
@@ -65,13 +65,17 @@
     &:not(:first-child){
       margin-top: 16px;
     }
+
+    @media (max-width: 424.98px) {
+      margin: 0;
+    }
   }
 
   &__icon {
-    margin-right: 16px;
+    margin-right: 10px;
 
-    width: 43px;
-    height: 43px;
+    width: 25px;
+    height: 25px;
 
     flex-shrink: 0;
     display: flex;
@@ -82,13 +86,21 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    font-size: rem(16);
+    font-size: rem(12);
     color: var(--light-text);
+
+    @media (min-width: 768px) {
+      margin-right: 16px;
+      width: 43px;
+      height: 43px;
+      font-size: rem(16);
+    }
+
   }
 
   &__item-text{
     margin: 0;
-    font-size: rem(20);
+    @include adaptiveValue('font-size', 20, 16);
     line-height: 1.2;
     font-weight: 400;
   }
@@ -124,7 +136,7 @@
   &__title{
     margin-bottom: 8px;
 
-    font-size: rem(24);
+    @include adaptiveValue('font-size', 24, 18);
     line-height: 1.33;
     font-weight: 600;
   }
@@ -132,7 +144,7 @@
   &__text{
     margin: 0;
     color: var(--grey-text);
-    font-size: rem(16);
+    @include adaptiveValue('font-size', 16, 14);
     line-height: 1.5;
     font-weight: 400;
   }

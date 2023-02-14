@@ -21,4 +21,11 @@
   --green-text: #14A800;
   --red-text: #EB001B;
   --blue-text: #1F57C3;
+
+  //margin
+  --padding-section: 64px;
+
+  @media (max-width: 767.98px) {
+    --padding-section: 35px;
+  }
 }
