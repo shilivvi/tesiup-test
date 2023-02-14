@@ -6,6 +6,9 @@
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
+  --green: #14A800;
+  --red: #EB001B;
+
   // bgs
   --top-header-bg: #4D4F54;
   --light-bg: #ffffff;
@@ -15,4 +18,7 @@
   --light-text: #ffffff;
   --black-text: #001E00;
   --grey-text: #4D4F54;
+  --green-text: #14A800;
+  --red-text: #EB001B;
+  --blue-text: #1F57C3;
 }

@@ -1,0 +1,150 @@
+.managers{
+  background-color: var(--grey-bg);
+  padding: 64px 0;
+
+  &__grid{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+
+    @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: 8fr 4fr;
+      grid-auto-flow: dense;
+      grid-gap: 20px;
+    }
+  }
+
+  &__title{
+    margin-bottom: 24px;
+    font-size: rem(32);
+
+    &:not(:first-child){
+      margin-top: 40px;
+    }
+  }
+
+  &__text{
+    margin: 0;
+    color: var(--grey-text);
+    font-size: rem(16);
+    line-height: 1.5;
+    font-weight: 400;
+
+    &--wrong, &--right{
+      display: flex;
+      align-items: flex-start;
+      font-weight: 700;
+
+      & .managers__icon{
+        margin-right: 16px;
+      }
+    }
+
+    &--wrong{
+      margin-bottom: 10px;
+    }
+
+    &--right{
+      margin: 24px 0 15px 0;
+    }
+  }
+
+  &__icon{
+    object-fit: contain;
+  }
+}
+
+.managers-sidebar{
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px rgba(6, 87, 133, 0.16);
+
+  height: fit-content;
+
+  padding: 24px;
+
+
+  @media (min-width: 992px) {
+    position: sticky;
+    top: 15px;
+  }
+
+  @media (max-width: 991.98px) {
+    max-width: 392px;
+    margin: 0 auto;
+  }
+
+  & .tns-inner{
+    overflow: hidden;
+  }
+
+  & .tns-nav{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+
+    & button{
+      border: none;
+      outline: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #CFDCD9;
+
+      &:not(:last-child){
+        margin-right: 16px;
+      }
+    }
+
+    & button.tns-nav-active{
+      background-color: var(--green);
+    }
+  }
+
+  &__title{
+    margin: 0 0 24px 0;
+    text-align: center;
+    color: var(--blue-text);
+    font-family: 'KaushanScript';
+    font-size: rem(24);
+    line-height: 1.33;
+  }
+
+  &__img{
+    margin-bottom: 24px;
+
+    & img{
+      width: 100%;
+    }
+  }
+
+  &__name{
+    margin-bottom: 16px;
+    color: var(--green-text);
+    font-size: rem(24);
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__social{
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+
+    & i{
+      color: var(--green-text);
+    }
+  }
+
+  &__link{
+    margin-left: 6px;
+    text-decoration: none;
+    color: var(--black-text);
+    font-size: rem(16);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+}
