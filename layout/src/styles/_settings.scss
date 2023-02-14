@@ -102,6 +102,13 @@ img {
   position: relative;
 }
 
+.title{
+  margin: 0;
+  color: var(--black-text);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 .fa,
 .fas {
   font-family: 'Font Awesome 5 Free';
