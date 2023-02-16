@@ -9,6 +9,9 @@ foreach (glob(dirname(__FILE__) . '/inc/classes/*.php') as $class) {
     require_once $class;
 }
 
+// Load theme page settings
+require_once 'inc/options-page.php';
+
 // Register nav menus
 function tesiup_register_nav_menus()
 {
