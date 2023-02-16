@@ -1,4 +1,4 @@
-<footer></footer>
+</div> <!-- /site-container -->
 
 <?php wp_footer(); ?>
 
