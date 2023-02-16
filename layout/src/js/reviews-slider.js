@@ -9,14 +9,25 @@ addEventListener('DOMContentLoaded', () => {
 
     tns({
         container: '#reviews__slider',
-        items: 3,
+        items: 1,
         slideBy: 'page',
-        gutter: 25,
+        gutter: 15,
         mouseDrag: true,
         navPosition: 'bottom',
         prevButton: '.reviews__arrow--prev',
         nextButton: '.reviews__arrow--next',
         loop: false,
-        swipeAngle: false
+        swipeAngle: false,
+        responsive: {
+            1200: {
+                items: 3,
+            },
+            768: {
+                items: 2,
+            },
+            576: {
+                gutter: 25
+            }
+        }
     });
 });

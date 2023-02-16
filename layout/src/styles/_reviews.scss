@@ -107,7 +107,7 @@
 
   &__arrow{
     flex-shrink: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -119,6 +119,10 @@
     color: var(--light-text);
 
     font-size: rem(20);
+
+    @media (min-width: 576px) {
+      display: flex;
+    }
 
     &:disabled{
       background-color: #CFDCD9;
@@ -137,8 +141,20 @@
     }
   }
 
+  & .tns-outer{
+    width: 100%;
+
+    @media (min-width: 576px) {
+      width: calc(100% - 80px);
+    }
+  }
+
   & .tns-inner{
-    padding: 10px 25px;
+    padding: 10px;
+
+    @media (min-width: 576px) {
+      padding: 10px 25px;
+    }
   }
 
   & .tns-slider{
