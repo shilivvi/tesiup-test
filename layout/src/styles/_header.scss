@@ -321,6 +321,11 @@
 
 .mobile-menu{
   background-color: var(--light-bg);
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+
   & > li{
     display: flex;
     border-bottom: 1px solid #C5CBE3;

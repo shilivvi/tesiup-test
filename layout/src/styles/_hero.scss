@@ -1,0 +1,50 @@
+.hero{
+  padding: 16px 0 var(--padding-section) 0;
+
+
+  &__breadcrumbs{
+    margin-bottom: 24px;
+  }
+
+  &__grid{
+    margin-bottom: 64px;
+
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+  }
+
+  &__subtitle{
+    margin: 0 0 8px 0;
+    color: var(--black-text);
+
+    @include adaptiveValue('font-size', 24, 18);
+    font-weight: 400;
+    line-height: 1.33;
+  }
+
+  &__title{
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 64, 36);
+    font-weight: 700;
+    line-height: 1.14;
+
+    & span{
+      font-family: 'KaushanScript';
+      font-weight: 400;
+      color: var(--green-text);
+    }
+  }
+
+  &__text{
+    margin: 0 auto;
+
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 24, 18);
+    line-height: 1.33;
+    font-weight: 400;
+    text-align: center;
+
+    max-width: 1020px;
+    width: 100%;
+  }
+}
