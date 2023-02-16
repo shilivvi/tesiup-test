@@ -7,6 +7,28 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    white-space: nowrap;
+  }
+
+  &__mobile-btn{
+    padding: 8px 14px;
+
+    background-color: #14A800;
+    color: var(--light-text);
+    border-radius: 50px;
+
+    @include adaptiveValue('font-size', 14, 10);
+    line-height: 1.6;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: block;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -20,12 +42,21 @@
     display: flex;
     align-items: center;
     position: relative;
+
+    &--time{
+      display: none;
+
+      @media (min-width: 1240px) {
+        display: block;
+      }
+    }
   }
 
   &__drop-down{
     background-color: var(--light-bg);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0, 0.2);
     position: absolute;
+    z-index: 9999;
     top: calc(100% + 15px);
     left: 0;
     color: var(--black-text);
@@ -46,6 +77,8 @@
     color: var(--black-text);
     transition: background-color .3s ease;
 
+    @include adaptiveValue('font-size', 14, 12);
+
     @media (hover: hover) {
       &:hover {
         background-color: var(--grey-bg);
@@ -60,30 +93,52 @@
   }
 
   &__link{
-    font-size: rem(14);
+    font-size: 0;
     color: var(--light-text);
     text-decoration: none;
     font-weight: 400;
     line-height: 1;
+
+    @media (min-width: 1120px) {
+      @include adaptiveValue('font-size', 14, 12);
+    }
   }
 
   &__text{
     font-size: rem(12);
     line-height: 1;
     font-weight: 400;
+
   }
 
   &__btn{
-    font-size: rem(14);
+    font-size: 0;
     color: var(--light-text);
 
     & i{
-      margin-left: 8px;
+      &.fa-angle-down{
+        display: none;
+
+        @media (min-width: 1120px) {
+          display: inline-block;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    @media (min-width: 1120px) {
+      @include adaptiveValue('font-size', 14, 12);
     }
   }
 }
 
 .top-header-menu{
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+
   &__list{
     display: flex;
     gap: 19px;
@@ -104,8 +159,12 @@
 }
 
 .top-header-social{
-  display: flex;
+  display: none;
   gap: 16px;
+
+  @media (min-width: 768px) {
+    display: flex
+  }
 
   &__item{
 

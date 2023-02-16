@@ -7,7 +7,7 @@
 </head>
 <body class="page__body">
 <div class="site-container">
-    <header class="header" style="display: none">
+    <header class="header">
         <div class="header__top-header top-header">
             <div class="top-header__container container">
                 <ul class="top-header__contacts top-header-contacts list-reset" aria-label="Contacts">
@@ -15,13 +15,13 @@
                         <i class="fas fa-phone-alt top-header-contacts__icon" aria-hidden="true"></i>
                         <a href="tel:493022389845" class="top-header-contacts__link">+49 30 223-898-45</a>
                     </li>
-                    <li class="top-header-contacts__item">
+                    <li class="top-header-contacts__item top-header-contacts__item--time">
                         <p class="top-header-contacts__text">09:00 – 20:00 Lun - Ven</p>
                     </li>
                     <li class="top-header-contacts__item">
-                        <i class="fab fa-whatsapp top-header-contacts__icon" aria-hidden="true"></i>
                         <button data-drop-menu="1" class="top-header-contacts__btn btn-reset" aria-haspopup="true"
                                 aria-expanded="false" aria-label="Open WhatsApp phones list">
+                            <i class="fab fa-whatsapp top-header-contacts__icon" aria-hidden="true"></i>
                             WhatsApp
                             <i class="fas fa-angle-down" aria-hidden="true"></i>
                         </button>
@@ -36,9 +36,9 @@
                         </ul>
                     </li>
                     <li class="top-header-contacts__item">
-                        <i class="fas fa-envelope top-header-contacts__icon" aria-hidden="true"></i>
                         <button data-drop-menu="1" class="top-header-contacts__btn btn-reset" aria-haspopup="true"
                                 aria-expanded="false" aria-label="Open E-Mail address list">
+                            <i class="fas fa-envelope top-header-contacts__icon" aria-hidden="true"></i>
                             E-Mail
                             <i class="fas fa-angle-down" aria-hidden="true"></i>
                         </button>
@@ -94,6 +94,82 @@
                         </a>
                     </li>
                 </ul>
+                <a href="#" class="top-header__mobile-btn">RICHIESTA SENZA IMPEGNO</a>
+            </div>
+        </div>
+        <div class="header__desktop-header header-desktop">
+            <div class="header-desktop__container container">
+                <div class="header-desktop__logo">
+                    <img src="img/site-logo.svg" alt="">
+                </div>
+                <button id="header-burger" class="header-desktop__burger header-desktop__burger btn-reset"><span></span></button>
+                <div class="header-desktop__wrap">
+                    <ul id="main-menu" class="header-desktop__menu list-reset" aria-label="Basic menu" role="menubar">
+                        <li class="menu-item-has-children">
+                            <a href="#" class="header-desktop__link" aria-haspopup="true" aria-expanded="false" role="menuitem">
+                                PRESTAZIONI
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="header-desktop__menu sub-menu list-reset" role="menu">
+                                <li>
+                                    <a href="#" class="header-desktop__link" role="menuitem">Test</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" class="header-desktop__link" aria-haspopup="true" aria-expanded="false" role="menuitem">
+                                DISCIPLINE
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="header-desktop__menu sub-menu list-reset" role="menu">
+                                <li>
+                                    <a href="#" class="header-desktop__link" role="menuitem">Test</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" class="header-desktop__link" aria-haspopup="true" aria-expanded="false" role="menuitem">
+                                PREZZI
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="header-desktop__menu sub-menu list-reset" role="menu">
+                                <li>
+                                    <a href="#" class="header-desktop__link" role="menuitem">Test</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form action="/" class="header-desktop__search">
+                        <input class="header-desktop__input input-reset" type="text">
+                        <button class="header-desktop__search-btn btn-reset" aria-label="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <ul id="mobile-menu" class="header-desktop__menu-mobile mobile-menu list-reset">
+                        <li>
+                            <a href="#" class="mobile-menu__link">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">Garanzie</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">Lavora con noi</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">Dichiarazione legale</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">Il nostro team</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">Come funziona</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="header-desktop__btn">RICHIESTA NON VINCOLANTE</a>
             </div>
         </div>
     </header>
@@ -669,7 +745,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </sectio>
         <section class="guaranty">
             <div class="guaranty__container container">
                 <h2 class="guaranty__title title">Garanzie</h2>

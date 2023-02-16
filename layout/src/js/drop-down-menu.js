@@ -7,10 +7,10 @@ addEventListener('DOMContentLoaded', () => {
 });
 
 const dropDownHandler = (e) => {
-    if (e.target.classList.contains('show')) {
-        closeDropDown(e.target);
+    if (e.target.closest('button').classList.contains('show')) {
+        closeDropDown(e.target.closest('button'));
     } else {
-        openDropDown(e.target);
+        openDropDown(e.target.closest('button'));
     }
 }
 
