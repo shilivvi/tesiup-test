@@ -1,4 +1,6 @@
 .text-block{
+  padding: var(--padding-section) 0;
+
   &__title{
     margin-bottom: 24px;
     text-align: center;
@@ -58,9 +60,8 @@
       }
     }
 
-    &:last-child{
+    & > :last-child{
       margin: 0;
     }
-
   }
 }
