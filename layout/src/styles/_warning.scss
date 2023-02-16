@@ -1,0 +1,45 @@
+.warning {
+  padding: var(--padding-section) 0;
+
+  &__wrap {
+    padding: 32px 15px 32px 80px;
+
+    background: var(--light-bg);
+    border: 1px solid #C5CBE3;
+    box-shadow: 0 4px 16px rgba(6, 87, 133, 0.16);
+
+    position: relative;
+
+    @media (min-width: 768px) {
+      padding: 32px 32px 32px 120px;
+    }
+
+    @media (min-width: 576px) {
+      padding: 32px 32px 32px 120px;
+    }
+  }
+
+  &__icon {
+    color: var(--red-text);
+    font-size: rem(64);
+
+    position: absolute;
+    left: 28px;
+    top: 32px;
+
+    @media (min-width: 768px) {
+      font-size: rem(64);
+      left: 49px;
+      top: 32px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 24, 18);
+    line-height: 1.33;
+    font-weight: 400;
+  }
+
+}
