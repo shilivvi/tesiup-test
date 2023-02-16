@@ -1,6 +1,6 @@
 <?php
 
-class Tesiup_Walker_Nav_Menu
+class Tesiup_Walker_Nav_Menu extends Walker_Nav_Menu
 {
 
     public function start_lvl(&$output, $depth = 0, $args = null)
