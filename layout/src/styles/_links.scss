@@ -1,0 +1,97 @@
+.links{
+  &__title{
+    margin-bottom: 24px;
+    @include adaptiveValue('font-size', 40, 26);
+  }
+
+  &__subtitle{
+    margin-bottom: 40px;
+
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 16, 14);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-gap: 24px;
+  }
+
+  &__col{
+    &--big{
+      grid-column: 3 / 5;
+    }
+  }
+
+  &__menu-name{
+    margin: 0 0 16px 0;
+
+    color: var(--green-text);
+    font-family: 'KaushanScript';
+    @include adaptiveValue('font-size', 24, 18);
+    line-height: 1;
+  }
+
+  &__list{
+    padding-left: 36px;
+
+    &--two-col{
+      padding-left: 28px;
+      columns: 2;
+      gap: 52px;
+    }
+  }
+
+  &__list--two-col &__link{
+    & i{
+      left: -28px;
+    }
+  }
+
+  &__item{
+    position: relative;
+
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link{
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 16, 14);
+    font-weight: 500;
+    line-height: 1.5;
+
+    & i{
+      color: var(--green-text);
+      font-size: rem(12);
+
+      position: absolute;
+      left: -36px;
+      top: 14px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__item &__list{
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  &__item &__list &__item::before{
+    content: "·";
+    font-size: 1.5em;
+    line-height: 1;
+
+    position: absolute;
+    left: -14px;
+    top: 10px;
+    transform: translateY(-50%);
+  }
+
+  &__item &__list &__link i{
+    left: -56px;
+  }
+}
