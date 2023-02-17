@@ -1,0 +1,11 @@
+{
+  "name": "acf/reviews-section",
+  "title": "Reviews section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./reviews-section.php"
+  },
+  "align": "full"
+}
