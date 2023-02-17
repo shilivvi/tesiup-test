@@ -1,11 +1,11 @@
 {
-  "name": "acf/hero-section",
-  "title": "hero section",
+  "name": "acf/price-section",
+  "title": "Price section",
   "style": "tesiup-main",
   "category": "theme",
   "acf": {
     "mode": "edit",
-    "renderTemplate": "./hero-section.php"
+    "renderTemplate": "./price-section.php"
   },
   "align": "full"
 }
