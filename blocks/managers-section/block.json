@@ -1,0 +1,11 @@
+{
+  "name": "acf/managers-section",
+  "title": "Managers section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./managers-section.php"
+  },
+  "align": "full"
+}
