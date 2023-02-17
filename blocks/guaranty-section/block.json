@@ -1,0 +1,11 @@
+{
+  "name": "acf/guaranty-section",
+  "title": "Guaranty section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./guaranty-section.php"
+  },
+  "align": "full"
+}
