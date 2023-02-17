@@ -1,0 +1,11 @@
+{
+  "name": "acf/sale-text-section",
+  "title": "Sale text section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./sale-text-section.php"
+  },
+  "align": "full"
+}
