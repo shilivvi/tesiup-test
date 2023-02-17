@@ -9,7 +9,9 @@
                 <h1 class="hero__title title">
                     <?php the_field('title') ?>
                 </h1>
-                <?php echo do_shortcode(get_field('form')) ?>
+                <div class="hero__form">
+                    <?php echo do_shortcode(get_field('form')) ?>
+                </div>
             </div>
             <div class="hero__col">
                 <div class="hero__img">
