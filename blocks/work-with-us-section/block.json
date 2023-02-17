@@ -1,0 +1,11 @@
+{
+  "name": "acf/work-with-us-section",
+  "title": "Work with us section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./work-with-us-section.php"
+  },
+  "align": "full"
+}
