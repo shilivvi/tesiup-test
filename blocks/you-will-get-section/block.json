@@ -1,0 +1,11 @@
+{
+  "name": "acf/you-will-get-section",
+  "title": "You will get section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./you-will-get-section.php"
+  },
+  "align": "full"
+}
