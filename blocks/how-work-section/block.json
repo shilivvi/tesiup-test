@@ -1,0 +1,11 @@
+{
+  "name": "acf/how-work-section",
+  "title": "How work section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./how-work-section.php"
+  },
+  "align": "full"
+}
