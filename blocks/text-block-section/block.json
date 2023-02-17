@@ -1,0 +1,11 @@
+{
+  "name": "acf/text-block-section",
+  "title": "Text block section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./text-block-section.php"
+  },
+  "align": "full"
+}
