@@ -1,6 +1,13 @@
 <?php get_header(); ?>
 
-	<main></main>
+	<main class="main">
+        <?php
+        while ( have_posts() ) :
+            the_post();
+            the_content();
+        endwhile;
+        ?>
+    </main>
 
 <?php
 get_footer();

@@ -1,6 +1,5 @@
 <?php
     $theme_options = get_fields('option');
-    print_r($theme_options);
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="page">

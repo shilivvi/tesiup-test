@@ -1,0 +1,11 @@
+{
+  "name": "acf/hero-section",
+  "title": "Hero section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "./hero-section.php"
+  },
+  "align": "full"
+}

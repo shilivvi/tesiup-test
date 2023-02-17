@@ -9,6 +9,11 @@ foreach (glob(dirname(__FILE__) . '/inc/classes/*.php') as $class) {
     require_once $class;
 }
 
+// Load blocks
+foreach (glob(dirname(__FILE__) . '/blocks/*/*.json') as $block) {
+    register_block_type($block);
+}
+
 // Load theme page settings
 require_once 'inc/options-page.php';
 
@@ -35,3 +40,10 @@ function tesiup_enqueue_style()
 }
 
 add_action('wp_enqueue_scripts', 'tesiup_enqueue_style');
+
+function tesiup_admin_enqueue_style()
+{
+    wp_register_style('tesiup-main', get_stylesheet_directory_uri() . '/assets/css/style.css');
+}
+
+add_action('admin_enqueue_scripts', 'tesiup_admin_enqueue_style');
