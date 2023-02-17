@@ -1,0 +1,11 @@
+{
+  "name": "acf/video-chat-section",
+  "title": "Video chat section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./video-chat-section.php"
+  },
+  "align": "full"
+}
