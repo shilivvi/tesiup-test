@@ -1,0 +1,11 @@
+{
+  "name": "acf/warning-section",
+  "title": "Warning section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./warning-section.php"
+  },
+  "align": "full"
+}
