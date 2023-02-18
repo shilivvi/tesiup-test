@@ -1,0 +1,128 @@
+.faq{
+  padding-top: var(--padding-section);
+  padding-bottom: calc(var(--padding-section) / 2);
+
+  &__container{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 24px;
+  }
+
+  &__title{
+    margin-bottom: 32px;
+    @include adaptiveValue('font-size', 40, 26);
+    line-height: 1.6;
+  }
+
+  &__list{
+
+  }
+
+  &__item{
+    position: relative;
+    overflow: hidden;
+
+    &::after{
+      content: '';
+      display: block;
+
+      width: 92%;
+      height: 1px;
+      background-color: var(--crayola);
+
+      position: absolute;
+      bottom: 0;
+      left: 33px;
+    }
+  }
+
+  &__btn{
+    padding: 20px 0 20px 33px;
+
+    width: 100%;
+    text-align: left;
+
+    position: relative;
+  }
+
+  &__question{
+    margin: 0;
+
+    color: var(--black-text);
+    font-weight: 600;
+    @include adaptiveValue('font-size', 20, 16);
+    line-height: 1.2;
+  }
+
+  &__icon{
+    &::after,
+    &::before{
+      content: '';
+      display: block;
+
+      width: 16px;
+      height: 2px;
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      background-color: var(--blue-text);
+
+      transition: transform .1s ease, background-color .3s ease;
+    }
+
+    &::before{
+      transform: translateY(-50%);
+    }
+
+    &::after{
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+
+  &__content{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all .3s ease;
+
+    box-sizing: content-box;
+
+    color: var(--grey-text);
+    @include adaptiveValue('font-size', 16, 14);
+    line-height: 1.5;
+
+    & p{
+      margin: 0;
+    }
+
+    & ol,
+    & ul{
+      margin: 0;
+      padding: 0;
+    }
+
+    & > :not(:last-child){
+      margin-bottom: 5px;
+    }
+  }
+
+  & .open &__content{
+    opacity: 1;
+    overflow: visible;
+    padding-bottom: 16px;
+  }
+
+  & .open &__icon{
+    &::after,
+    &::before{
+      background-color: var(--grey-text);
+    }
+
+    &::after{
+      transform: translateY(-50%) rotate(0);
+    }
+  }
+}
