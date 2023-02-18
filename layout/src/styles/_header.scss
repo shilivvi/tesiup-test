@@ -166,7 +166,7 @@
     overflow: hidden;
 
     &::placeholder {
-      color: var(--green-text);
+      color: var(--grey-text);
     }
 
     &:focus{
@@ -184,7 +184,8 @@
     border-left: 1px solid #C5CBE3;
 
     position: absolute;
-    right: 1px;
+    right: 0px;
+    top: 1px;
 
     & i{
       margin: 3px 3px 0 0;

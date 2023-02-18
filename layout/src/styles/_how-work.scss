@@ -185,6 +185,10 @@
     @include adaptiveValue('font-size', 16, 14);
     line-height: 1;
     font-weight: 700;
+
+    text-decoration: none;
+    display: block;
+    width: fit-content;
   }
 
   &__controls{
