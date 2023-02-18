@@ -36,7 +36,13 @@ function tesiup_enqueue_style()
     wp_enqueue_style('tesiup-main', get_stylesheet_directory_uri() . '/assets/css/style.css');
 
     wp_enqueue_script('tesiup-vendors', get_stylesheet_directory_uri() . '/assets/js/vendors.js', '', false, true);
-    wp_enqueue_script('tesiup', get_stylesheet_directory_uri() . '/assets/js/scripts.js', 'tesiup-vendors', false, true);
+    wp_enqueue_script('tesiup', get_stylesheet_directory_uri() . '/assets/js/scripts.js', ['tesiup-vendors'], false, true);
+
+    wp_enqueue_script('popper', get_stylesheet_directory_uri() . '/assets/js/lib/popper.min.js', '', false, true);
+    wp_enqueue_script('tippy', get_stylesheet_directory_uri() . '/assets/js/lib/tippy-bundle.umd.min.js', ['popper'], false, true);
+    wp_enqueue_script('tooltips', get_stylesheet_directory_uri() . '/assets/js/tooltips.js', ['popper', 'tippy'], false, true);
+
+    wp_enqueue_script('forminator-select2', forminator_plugin_url() . 'assets/forminator-ui/js/select2.full.min.js', ['jquery'], FORMINATOR_VERSION, true);
 }
 
 add_action('wp_enqueue_scripts', 'tesiup_enqueue_style');
@@ -47,3 +53,14 @@ function tesiup_admin_enqueue_style()
 }
 
 add_action('admin_enqueue_scripts', 'tesiup_admin_enqueue_style');
+
+function add_none_class_for_forminator_form_design($design_class, $form_design)
+{
+    if ($form_design = 'none') {
+        $design_class = 'forminator-design--' . $form_design;
+    }
+
+    return $design_class;
+}
+
+add_filter('forminator_render_form_design_class', 'add_none_class_for_forminator_form_design', 10, 2);
