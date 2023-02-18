@@ -34,6 +34,7 @@ function tesiup_enqueue_style()
 {
     wp_enqueue_style('tesiup', get_stylesheet_uri());
     wp_enqueue_style('tesiup-main', get_stylesheet_directory_uri() . '/assets/css/style.css');
+    wp_enqueue_style('tesiup-forminator', get_stylesheet_directory_uri() . '/assets/css/forminator.css');
 
     wp_enqueue_script('tesiup-vendors', get_stylesheet_directory_uri() . '/assets/js/vendors.js', '', false, true);
     wp_enqueue_script('tesiup', get_stylesheet_directory_uri() . '/assets/js/scripts.js', ['tesiup-vendors'], false, true);
