@@ -78,7 +78,7 @@
 .forminator-ui.forminator-custom-form .forminator-row .forminator-field .forminator-select--field{
     outline: none;
     background-color: #ffffff;
-    border: 1px solid #C5CBE3;
+    border: 1px solid var(--crayola);
     border-radius: 4px;
     width: 100%;
     height: 100%;
@@ -95,7 +95,7 @@
 .forminator-ui.forminator-custom-form .forminator-row .forminator-field .forminator-select--field:active,
 .forminator-ui.forminator-custom-form .forminator-row .forminator-field .forminator-input:focus,
 .forminator-ui.forminator-custom-form .forminator-row .forminator-field .forminator-select--field:focus{
-    border-color: #FFD546;
+    border-color: var(--yellow-bg);
 }
 
 .forminator-ui.forminator-custom-form .forminator-row .forminator-field.forminator-has_error .forminator-input,

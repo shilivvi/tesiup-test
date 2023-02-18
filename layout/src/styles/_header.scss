@@ -156,7 +156,7 @@
     padding: 12px 40px 12px 12px;
 
     background: #FFFFFF;
-    border: 1px solid #C5CBE3;
+    border: 1px solid var(--crayola);
     border-radius: 50px;
 
     color: var(--black-text);
@@ -178,10 +178,10 @@
     width: 40px;
     height: 40px;
 
-    color: #C5CBE3;
+    color: var(--crayola);
     font-size: rem(12);
 
-    border-left: 1px solid #C5CBE3;
+    border-left: 1px solid var(--crayola);
 
     position: absolute;
     right: 0px;
@@ -261,7 +261,7 @@
     }
 
     &.open{
-      background-color: #C5CBE3;
+      background-color: var(--crayola);
 
       & span{
         display: none;
@@ -300,10 +300,10 @@
 
       & > li{
         width: 100%;
-        border-top: 1px solid #C5CBE3;
+        border-top: 1px solid var(--crayola);
 
         &:last-child{
-          border-bottom: 1px solid #C5CBE3;
+          border-bottom: 1px solid var(--crayola);
         }
 
         & > a{
@@ -329,7 +329,7 @@
 
   & > li{
     display: flex;
-    border-bottom: 1px solid #C5CBE3;
+    border-bottom: 1px solid var(--crayola);
   }
 
   &__link{

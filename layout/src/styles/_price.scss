@@ -43,7 +43,7 @@
 }
 
 .table-price{
-  border: 1px solid #C5CBE3;
+  border: 1px solid var(--crayola);
   box-shadow: 0 4px 16px rgba(6, 87, 133, 0.16);
   border-radius: 4px;
   border-spacing: 0;
@@ -99,7 +99,7 @@
   & tr{
     &:not(:last-child){
       & td{
-        border-bottom: 1px solid #C5CBE3;
+        border-bottom: 1px solid var(--crayola);
       }
     }
   }
@@ -109,7 +109,7 @@
     text-align: left;
 
     &:not(:last-child){
-      border-right: 1px solid #C5CBE3;
+      border-right: 1px solid var(--crayola);
     }
   }
 
@@ -122,7 +122,7 @@
     font-weight: 400;
     line-height: 1.5;
 
-    border-bottom: 1px solid #C5CBE3;
+    border-bottom: 1px solid var(--crayola);
 
     &:first-child{
       width: 48%;
