@@ -1,6 +1,24 @@
+import { throttle } from './throttle';
+
 addEventListener('DOMContentLoaded', () => {
     const headerMenu = document.querySelector('#main-menu');
     const headerBurger = document.querySelector('#header-burger');
+    const header = document.querySelector('header');
+    const headerOffset = header.getAttribute('data-offset') ?? 300;
+
+    const fixHeader = () => {
+        const scrollDistance = window.scrollY;
+
+        if(scrollDistance >= headerOffset){
+            if(!header.classList.contains('fixed')){
+                header.nextElementSibling.style.marginTop = header.offsetHeight + 'px';
+            }
+            header.classList.add('fixed');
+        }else{
+            header.nextElementSibling.style.marginTop = null;
+            header.classList.remove('fixed');
+        }
+    }
 
     if(headerMenu){
         const hasChildrenBtns = headerMenu.querySelectorAll('.menu-item-has-children a');
@@ -32,6 +50,10 @@ addEventListener('DOMContentLoaded', () => {
             document.querySelector('header')?.classList.toggle('fixed');
             document.querySelector('main')?.classList.toggle('dis-scroll');
         })
+    }
+
+    if(header){
+        window.addEventListener('scroll', throttle(fixHeader, 150));
     }
 
 });
