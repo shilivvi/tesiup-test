@@ -3,9 +3,13 @@
   padding-bottom: calc(var(--padding-section) / 2);
 
   &__container{
-    display: grid;
-    grid-template-columns: 9fr 3fr;
-    gap: 24px;
+    display: block;
+
+    @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: 9fr 3fr;
+      gap: 24px;
+    }
   }
 
   &__title{
@@ -37,12 +41,20 @@
   }
 
   &__btn{
-    padding: 20px 0 20px 33px;
+    padding: 20px 30px 20px 0;
 
     width: 100%;
     text-align: left;
 
     position: relative;
+
+    @media (min-width: 992px) {
+      padding: 20px 0 20px 33px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 20px 33px;
+    }
   }
 
   &__question{
@@ -70,6 +82,14 @@
       background-color: var(--blue-text);
 
       transition: transform .1s ease, background-color .3s ease;
+
+      @media (min-width: 992px) {
+        right: 0;
+      }
+
+      @media (min-width: 768px) {
+        right: 33px;
+      }
     }
 
     &::before{
