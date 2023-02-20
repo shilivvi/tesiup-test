@@ -1,0 +1,11 @@
+{
+  "name": "acf/links-section",
+  "title": "Links section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./links-section.php"
+  },
+  "align": "full"
+}
