@@ -1,0 +1,11 @@
+{
+  "name": "acf/faq-section",
+  "title": "FAQ section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./faq-section.php"
+  },
+  "align": "full"
+}
