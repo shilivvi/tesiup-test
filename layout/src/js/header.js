@@ -50,7 +50,7 @@ addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             headerBurger.classList.toggle('open');
             document.querySelector('header')?.classList.toggle('fixed');
-            document.querySelector('main')?.classList.toggle('dis-scroll');
+            document.body.classList.toggle('dis-scroll');
         })
     }
 
