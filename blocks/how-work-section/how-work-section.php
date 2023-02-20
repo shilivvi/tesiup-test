@@ -43,6 +43,9 @@
                                         <?php endif; ?>
                                     <?php endfor; ?>
                                 </div>
+                                <div class="how-work-slider__img">
+                                    <img <?php esc_attr_e($img_attr); ?> loading="lazy">
+                                </div>
                                 <div class="how-work-slider__content">
                                     <div class="how-work-slider__top">
                                         <div class="how-work-slider__step">Passo <?php echo $key + 1 ?></div>
