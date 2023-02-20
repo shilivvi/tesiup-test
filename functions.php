@@ -17,6 +17,10 @@ foreach (glob(dirname(__FILE__) . '/blocks/*/*.json') as $block) {
 // Load theme page settings
 require_once 'inc/options-page.php';
 
+add_action( 'after_setup_theme', function(){
+    add_theme_support( 'post-thumbnails' );
+});
+
 // Register nav menus
 function tesiup_register_nav_menus()
 {
