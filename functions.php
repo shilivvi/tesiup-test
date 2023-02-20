@@ -65,3 +65,19 @@ function add_none_class_for_forminator_form_design($design_class, $form_design)
 }
 
 add_filter('forminator_render_form_design_class', 'add_none_class_for_forminator_form_design', 10, 2);
+
+function tesiup_wp_nav_menu_objects($items, $args)
+{
+    foreach ($items as &$item) {
+
+        $icon = get_field('icon', $item);
+
+        if ($icon) {
+            $item->title .= ' <i class="' . $icon . '" aria-hidden="true"></i>';
+        }
+    }
+
+    return $items;
+}
+
+add_filter('wp_nav_menu_objects', 'tesiup_wp_nav_menu_objects', 10, 2);
