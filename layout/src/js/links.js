@@ -3,19 +3,21 @@ import Modal from './modal';
 addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('a');
 
-    const isValidHttpUrl = (string) => {
-        let url;
+    const isValidHttpUrl = (urlString) => {
         try {
-            url = new URL(string);
-        } catch (_) {
+            return Boolean(new URL(urlString));
+        }
+        catch(e){
             return false;
         }
-        return url.protocol === "http:" || url.protocol === "https:";
     }
 
     links.forEach(link => {
         link.addEventListener('click', (e) => {
-            const href = e.target.getAttribute('href');
+            const href = link.getAttribute('href');
+
+            console.log(href);
+            console.log(isValidHttpUrl(href));
 
             if (!isValidHttpUrl(href)) {
                 e.preventDefault();

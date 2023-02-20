@@ -38,8 +38,8 @@ addEventListener('DOMContentLoaded', () => {
         gutter: 15,
         mouseDrag: true,
         navPosition: 'bottom',
-        prevButton: '.reviews__arrow--prev',
-        nextButton: '.reviews__arrow--next',
+        prevButton: '.blog__arrow--prev',
+        nextButton: '.blog__arrow--next',
         loop: false,
         swipeAngle: false,
         responsive: {
