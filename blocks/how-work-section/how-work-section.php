@@ -4,9 +4,12 @@
 ?>
 <section class="how-work">
     <div class="how-work__container container">
-        <h2 class="how-work__title title">Come funziona</h2>
-        <p class="how-work__subtitle">Scopri come elaboriamo il tuo ordine quando utilizzi i nostri servizi
-            personalizzati</p>
+        <h2 class="how-work__title title">
+            <?php the_field('title'); ?>
+        </h2>
+        <p class="how-work__subtitle">
+            <?php the_field('subtitle'); ?>
+        </p>
         <div class="how-work__wrap">
             <?php if(get_field('slider')): ?>
             <div id="how-work-slider" class="how-work__slider how-work-slider">

@@ -1,6 +1,8 @@
 <section class="you-will-get">
     <div class="you-will-get__container container">
-        <h2 class="you-will-get__title title">Cosa otterete se affidate la stesura della vostra tesi a noi?</h2>
+        <h2 class="you-will-get__title title">
+            <?php the_field('title'); ?>
+        </h2>
         <?php if(get_field('list')): ?>
             <div class="you-will-get__grid">
                 <?php foreach (get_field('list') as $item): ?>

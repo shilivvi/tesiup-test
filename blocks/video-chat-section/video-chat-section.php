@@ -13,11 +13,15 @@
                 <img <?php esc_attr_e($img_attr); ?> loading="lazy">
             </div>
             <div class="video-chat__content">
-                <h2 class="video-chat__title title">Prenota una videochiamata in diretta con il tuo
-                    consulente!</h2>
-                <p class="video-chat__text">Se ci lasci scrivere la tua tesi di laurea, risparmierai molto tempo
-                    e otterrai un servizio dal rapporto qualità-prezzo favorevole.</p>
-                <button type="button" class="video-chat__btn btn-reset">Richiesta non vincolante</button>
+                <h2 class="video-chat__title title">
+                    <?php the_field('title'); ?>
+                </h2>
+                <p class="video-chat__text">
+                    <?php the_field('subtitle'); ?>
+                </p>
+                <button type="button" class="video-chat__btn btn-reset">
+                    <?php the_field('btn_text'); ?>
+                </button>
             </div>
         </div>
     </div>

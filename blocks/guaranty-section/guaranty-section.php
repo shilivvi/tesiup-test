@@ -1,6 +1,8 @@
 <section class="guaranty">
     <div class="guaranty__container container">
-        <h2 class="guaranty__title title">Garanzie</h2>
+        <h2 class="guaranty__title title">
+            <?php the_field('title'); ?>
+        </h2>
         <?php if(get_field('list')): ?>
             <div class="guaranty__grid">
                 <?php foreach (get_field('list') as $item): ?>
@@ -32,10 +34,16 @@
         <?php endif; ?>
         <div class="guaranty__action">
             <div class="guaranty__wrap">
-                <h3 class="guaranty__action-title title">Vuoi saperne di più?</h3>
-                <p class="guaranty__action-subtitle">Basta chiedere e ti risponderemo entro 15 minuti</p>
+                <h3 class="guaranty__action-title title">
+                    <?php the_field('action_title'); ?>
+                </h3>
+                <p class="guaranty__action-subtitle">
+                    <?php the_field('action_subtitle'); ?>
+                </p>
             </div>
-            <a href="#" class="guaranty__action-btn">Preventivo senza impegno</a>
+            <a href="<?php the_field('btn_link'); ?>" class="guaranty__action-btn">
+                <?php the_field('btn_text'); ?>
+            </a>
         </div>
     </div>
 </section>
