@@ -294,6 +294,20 @@
     }
   }
 
+  @media (hover: hover) {
+    &__menu li:hover .sub-menu{
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      @media (min-width: 992px) {
+        position: absolute;
+        z-index: 99;
+        top: 100%;
+      }
+    }
+  }
+
   @media (max-width: 991.98px) {
     &__burger.open ~ &__wrap {
       display: flex;

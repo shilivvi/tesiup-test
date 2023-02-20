@@ -1,6 +1,10 @@
 addEventListener('DOMContentLoaded', () => {
     const dropDownBtns = document.querySelectorAll('[data-drop-menu]');
 
+    if(window.matchMedia("(hover: hover)").matches){
+       return;
+    }
+
     dropDownBtns.forEach(($el) => {
         $el.addEventListener('click', dropDownHandler);
     });
@@ -18,7 +22,7 @@ const openDropDown = (el) => {
     const subMenu = el.nextElementSibling;
     el.classList.add('show');
     el.setAttribute('aria-expanded', true);
-    subMenu.classList.add('show')
+    subMenu?.classList.add('show');
 }
 
 const closeDropDown = (el) => {
