@@ -1,0 +1,11 @@
+{
+  "name": "acf/blog-section",
+  "title": "Blog section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./blog-section.php"
+  },
+  "align": "full"
+}
