@@ -1,0 +1,11 @@
+{
+  "name": "acf/form-section",
+  "title": "Form section",
+  "style": "tesiup-main",
+  "category": "theme",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "./form-section.php"
+  },
+  "align": "full"
+}
