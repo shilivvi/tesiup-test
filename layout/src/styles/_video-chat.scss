@@ -1,0 +1,51 @@
+.video-chat{
+  background-color: var(--grey-bg);
+  padding-bottom: 64px;
+
+  &__wrap{
+    max-width: 1011px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+    }
+  }
+
+  &__img{
+    flex-shrink: 0;
+  }
+
+  &__title{
+    margin-bottom: 16px;
+    @include adaptiveValue('font-size', 32, 24);
+  }
+
+  &__text{
+    margin-bottom: 25px;
+    color: var(--grey-text);
+    @include adaptiveValue('font-size', 16, 14);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__btn{
+    padding: 20px 31px;
+
+    border-radius: 50px;
+
+    background-color: var(--green);
+    color: var(--light-bg);
+    @include adaptiveValue('font-size', 16, 14);
+    font-weight: 700;
+    line-height: 1;
+
+    @media (max-width: 767.98px) {
+      padding: 15px 25px;
+    }
+  }
+}

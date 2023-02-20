@@ -1,0 +1,161 @@
+.contacts {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  z-index: 9999;
+
+  &:hover &__icons {
+    transform: rotate(180deg);
+    animation: none;
+  }
+
+  &:hover &__list {
+    visibility: visible;
+
+    animation-duration: .5s;
+    animation-name: animation-open-list;
+    transition-timing-function: ease-in;
+  }
+
+  &__btn {
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+
+    background-color: var(--green);
+
+    border-radius: 50% 50% 0 50%;
+
+    overflow: hidden;
+
+    position: relative;
+  }
+
+  &__icons {
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    top: -71px;
+    left: 28px;
+
+    animation: 10s ease 0s infinite normal none running contacts-spin;
+  }
+
+  &__icon {
+    color: var(--light-text);
+    font-size: rem(24);
+    position: absolute;
+
+    &--dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+
+      & span {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--light-bg);
+      }
+    }
+  }
+
+  &__list {
+    padding: 8px 0;
+    border-radius: 4px;
+
+    position: absolute;
+    z-index: 5;
+    bottom: 80px;
+    right: 0;
+
+    background-color: var(--green);
+
+    white-space: nowrap;
+
+    visibility: hidden;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 100%;
+      display: block;
+      right: 17px;
+      border-style: solid;
+      border-color: var(--green) transparent transparent;
+      border-width: 14px;
+      margin-top: -1px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        display: block;
+        width: 85%;
+        height: 1px;
+        background-color: rgba(157, 217, 121, 0.4);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__link {
+    padding: 8px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--light-text);
+    font-weight: 400;
+    @include adaptiveValue('font-size', 16, 14);
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition: background-color .3s ease;
+
+    @media(hover: hover) {
+      &:hover {
+        background-color: #1BC504;
+      }
+    }
+
+    & svg {
+      max-width: 16px;
+    }
+  }
+
+}
+
+@keyframes animation-open-list {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+    transform-origin: right bottom;
+  }
+
+  50% {
+    transform: scale(1.03, 1.03);
+    transform-origin: right bottom;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+    transform-origin: right bottom;
+  }
+}

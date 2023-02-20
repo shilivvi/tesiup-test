@@ -1,0 +1,207 @@
+.price{
+  background-color: var(--grey-bg);
+  padding: var(--padding-section) 0;
+
+  &__title{
+    margin-bottom: 32px;
+    text-align: center;
+    @include adaptiveValue('font-size', 40, 26);
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+
+    @media (min-width: 992px) {
+      grid-template-columns: 8fr 4fr;
+      grid-gap: 25px;
+    }
+
+    &:first-of-type{
+      margin-bottom: 88px;
+    }
+  }
+
+  &__scroll-wrap{
+    overflow-x: auto;
+  }
+
+  &__price-table{
+    min-width: 480px;
+    overflow-x: scroll;
+  }
+
+  &__img{
+    @media (max-width: 991.98px) {
+      width: 100%;
+      max-width: 270px;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+.table-price{
+  border: 1px solid var(--crayola);
+  box-shadow: 0 4px 16px rgba(6, 87, 133, 0.16);
+  border-radius: 4px;
+  border-spacing: 0;
+
+  background-color: var(--light-bg);
+
+  &__direction{
+    margin-bottom: 7px;
+
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 16, 14);
+    font-weight: 700;
+    line-height: 1.33;
+
+    text-transform: uppercase;
+  }
+
+  &__description{
+    color: var(--grey-text);
+    font-family: 'KaushanScript';
+    @include adaptiveValue('font-size', 14, 12);
+    font-weight: 400;
+    line-height: 1.29;
+  }
+
+  &__price{
+    color: var(--blue-text);
+    @include adaptiveValue('font-size', 16, 14);
+    font-weight: 400;
+    line-height: 1.5;
+
+    & span{
+      @include adaptiveValue('font-size', 24, 18);
+      font-weight: 700;
+      line-height: 1.33;
+    }
+
+    &--no-price{
+      color: var(--blue-text);
+      @include adaptiveValue('font-size', 16, 14);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+  }
+
+  &__format{
+    color: var(--blue-text);
+    @include adaptiveValue('font-size', 16, 14);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  & tr{
+    &:not(:last-child){
+      & td{
+        border-bottom: 1px solid var(--crayola);
+      }
+    }
+  }
+
+  & th,
+  & td{
+    text-align: left;
+
+    &:not(:last-child){
+      border-right: 1px solid var(--crayola);
+    }
+  }
+
+  & th {
+    width: 24%;
+    padding: 8px 10px;
+
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 16, 14);
+    font-weight: 400;
+    line-height: 1.5;
+
+    border-bottom: 1px solid var(--crayola);
+
+    &:first-child{
+      width: 48%;
+    }
+
+    @media (min-width: 576px) {
+      padding: 8px 16px;
+
+      &:first-child{
+        padding: 8px 24px;
+      }
+    }
+  }
+
+  & td{
+    padding: 15px 10px;
+
+    @media (min-width: 576px) {
+      padding: 16px;
+
+      &:first-child{
+        padding: 16px 24px;
+      }
+    }
+  }
+}
+
+.price-services{
+  &__title{
+    margin-bottom: 16px;
+
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 24, 18);
+    font-weight: 700;
+    line-height: 1.33;
+
+    display: flex;
+    justify-content: space-between;
+
+    &--green{
+      margin-bottom: 24px;
+      color: var(--green-text);
+    }
+
+    & span{
+      align-self: self-end;
+
+      color: var(--blue-text);
+      @include adaptiveValue('font-size', 16, 14);
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+  }
+
+  &__subtitle{
+    margin: 0 0 24px 0;
+    color: var(--grey-text);
+    @include adaptiveValue('font-size', 20, 16);
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  &__item{
+    display: flex;
+    gap: 15px;
+
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+
+  &__icon{
+    flex-shrink: 0;
+  }
+
+  &__text{
+    margin: 0;
+    color: var(--black-text);
+    @include adaptiveValue('font-size', 16, 14);
+    line-height: 1.5;
+  }
+}
